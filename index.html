@@ -6,6 +6,10 @@
     <title>Recomendações</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #f5f5f5;
@@ -37,6 +41,52 @@
             margin: 0;
             color: #555;
             font-size: 14px;
+        }
+
+        /* Menu de categorias */
+        .cats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .cats a {
+            background: #f1f1f1;
+            padding: 8px 12px;
+            border-radius: 999px;
+            text-decoration: none;
+            color: #333;
+            font-size: 13px;
+            border: 1px solid #eee;
+        }
+
+        .cats a:hover {
+            filter: brightness(0.96);
+        }
+
+        /* Categorias / seções */
+        .category {
+            margin-top: 18px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 0 0 10px;
+            padding: 0 6px;
+        }
+
+        .category-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .category-header small {
+            color: #777;
         }
 
         /* Grade de anúncios */
@@ -72,7 +122,19 @@
             width: 100%;
             height: 210px;
             object-fit: contain;
+            /* imagem completa */
             border-radius: 8px;
+            background: #fff;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            background: #eef6ff;
+            color: #1d4ed8;
+            padding: 6px 10px;
+            border-radius: 999px;
+            width: fit-content;
         }
 
         .card h2 {
@@ -104,7 +166,6 @@
 
         .btn {
             margin-top: auto;
-            /* empurra o botão pro final do card */
             display: block;
             text-align: center;
             background: #ffe600;
@@ -126,335 +187,410 @@
 
 <body>
     <div class="wrap">
+
         <div class="top">
-            <h1>Produtos recomendados (bem avaliados Volta as aulas)</h1>
+            <h1>Produtos recomendados (bem avaliados)</h1>
             <p>Escolhi opções práticas e com bom custo-benefício no Mercado Livre.</p>
+
+            <div class="cats">
+                <a href="#volta-aulas">📚 Volta às aulas</a>
+                <a href="#fe">🙏 Fé & Devocionais</a>
+                <a href="#moda">👕 Moda</a>
+                <a href="#casa">🏠 Casa & Limpeza</a>
+            </div>
         </div>
 
-        <div class="grid">
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./19.jpeg" alt="Café com DEUS Pai" />
-                <h2>Devocional Café Com Deus Pai Porções Diárias De Amor Junior Rostirola Edição 2026</h2>
-                <p>R$ 66,70</p>
-                <div class="badges">
-                    <span class="badge">Fé</span>
-                    <span class="badge">Espiritualidade</span>
-                    <span class="badge">Amor</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/2GApd8t" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
+        <!-- ===================== -->
+        <!-- CATEGORIA: VOLTA ÀS AULAS -->
+        <!-- ===================== -->
+        <section class="category" id="volta-aulas">
+            <div class="category-header">
+                <h3>📚 Volta às aulas</h3>
+                <small>Materiais e itens escolares</small>
             </div>
 
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./1.jpeg" alt="Caderno inteligente" />
-                <h2>Caderno inteligente</h2>
-                <p>R$ 79,90</p>
-                <div class="badges">
-                    <span class="badge">Variedade de Cores</span>
-                    <span class="badge">Lindo</span>
-                    <span class="badge">Entrega rápida</span>
-                    <span class="badge">Custo-benefício</span>
+            <div class="grid">
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./1.jpeg" alt="Caderno inteligente" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Caderno inteligente</h2>
+                    <p>R$ 79,90</p>
+                    <div class="badges">
+                        <span class="badge">Variedade de Cores</span>
+                        <span class="badge">Lindo</span>
+                        <span class="badge">Entrega rápida</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/2Fb9uhe" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
                 </div>
-                <a class="btn" href="https://mercadolivre.com/sec/2Fb9uhe" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./2.jpeg" alt="Caderno 10 matérias" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Caderno 10 matérias</h2>
+                    <p>R$ 23,74</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1eV2Fkk" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./3.jpeg" alt="kit 6 lápis Faber Castel" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit 6 lápis Faber Castel</h2>
+                    <p>R$ 20,79</p>
+                    <div class="badges">
+                        <span class="badge">Imperdível</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1JZzW61" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./4.jpeg" alt="kit 4 Borrachas Faber Castel" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit 4 borrachas Faber Castel</h2>
+                    <p>R$ 24,89</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1Q5Qic3" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./5.jpeg" alt="kit 24 borrachas leo leo" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit 24 borrachas Leo&Leo</h2>
+                    <p>R$ 33,97</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/146J7dY" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./6.jpeg" alt="kit 2 borrachas Faber Castel" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit 2 borrachas Faber Castel</h2>
+                    <p>R$ 9,99</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1JMZbVK" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./7.jpeg" alt="kit 4 Apontadores" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit 4 apontadores</h2>
+                    <p>R$ 21,20</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1jVK2VM" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./8.jpeg" alt="Kit 3 canetas" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit 3 canetas</h2>
+                    <p>R$ 33,90</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1KLGYJf" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./9.jpeg" alt="Estojo" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Estojo</h2>
+                    <p>R$ 29,79</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1hJB9iW" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./10.jpeg" alt="Mochila" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Mochila</h2>
+                    <p>R$ 66,12</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1PRQWsJ" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./11.jpeg" alt="Cola líquida" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Cola líquida</h2>
+                    <p>R$ 22,96</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/27uZFxt" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./12.jpeg" alt="Kit tesoura sem ponta" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit tesoura sem ponta</h2>
+                    <p>R$ 24,90</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/2F6Pn5S" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./13.jpeg" alt="12 lápis de cor" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>12 lápis de cor</h2>
+                    <p>R$ 30,40</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/2Z1XmDF" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./14.jpeg" alt="Canetinhas kit 24 cores" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Canetinhas kit 24 cores</h2>
+                    <p>R$ 19,00</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/25AFmuC" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./15.jpeg" alt="Tinta Guache 12 cores" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Tinta guache 12 cores</h2>
+                    <p>R$ 19,00</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1jdsrbC" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./16.jpeg" alt="Kit 12 pincéis" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Kit 12 pincéis</h2>
+                    <p>R$ 28,99</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1UVc917" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./17.jpeg" alt="500 Folhas A4" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>500 folhas A4</h2>
+                    <p>R$ 33,42</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1AqsGPD" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+                <!-- CARD -->
+                <div class="card">
+                    <img src="./18.jpeg" alt="Caneta Brush Pen 36 cores" />
+                    <span class="tag">Volta às aulas</span>
+                    <h2>Caneta Brush Pen 36 cores</h2>
+                    <p>R$ 26,99</p>
+                    <div class="badges">
+                        <span class="badge">Indispensável</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/25dM9bK" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- CATEGORIA: FÉ -->
+        <!-- ===================== -->
+        <section class="category" id="fe">
+            <div class="category-header">
+                <h3>🙏 Fé & Devocionais</h3>
+                <small>Leituras e inspiração</small>
             </div>
 
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./2.jpeg" alt="Caderno 10 matérias" />
-                <h2>Caderno 10 matérias</h2>
-                <p>R$ 23,74</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
+            <div class="grid">
+                <div class="card">
+                    <img src="./19.jpeg" alt="Café com DEUS Pai" />
+                    <span class="tag">Fé</span>
+                    <h2>Devocional Café Com Deus Pai (Edição 2026)</h2>
+                    <p>R$ 66,70</p>
+                    <div class="badges">
+                        <span class="badge">Fé</span>
+                        <span class="badge">Espiritualidade</span>
+                        <span class="badge">Amor</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/2GApd8t" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
                 </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1eV2Fkk" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- CATEGORIA: MODA -->
+        <!-- ===================== -->
+        <section class="category" id="moda">
+            <div class="category-header">
+                <h3>👕 Moda</h3>
+                <small>Roupas e acessórios</small>
             </div>
 
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./3.jpeg" alt="kit 6 lapis Faber Castel" />
-                <h2>kit 6 lapis Faber Castel</h2>
-                <p>R$ 20,79</p>
-                <div class="badges">
-                    <span class="badge">Imperdivel</span>
-                    <span class="badge">Custo-benefício</span>
+            <div class="grid">
+
+                <div class="card">
+                    <img src="./calca.jpeg" alt="Calça Jeans masculina" />
+                    <span class="tag">Moda</span>
+                    <h2>Calça jeans masculina confortável</h2>
+                    <p>Ótimo custo-benefício em calça masculina</p>
+                    <div class="badges">
+                        <span class="badge">Bem avaliado</span>
+                        <span class="badge">Conforto</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn"
+                        href="https://produto.mercadolivre.com.br/MLB-4392538214-calca-jeans-masculina-tradicional-corte-reto-_JM#origin%3Dshare%26sid%3Dshare"
+                        target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
                 </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1JZzW61" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
+
+                <div class="card">
+                    <img src="./bolsa.jpg" alt="Bolsa organizadora" />
+                    <span class="tag">Moda</span>
+                    <h2>Bolsa organizadora prática para o dia a dia</h2>
+                    <p>Uma solução simples que facilita a rotina e costuma ter ótimas avaliações.</p>
+                    <div class="badges">
+                        <span class="badge">Fácil de usar</span>
+                        <span class="badge">Ótimas avaliações</span>
+                        <span class="badge">Entrega rápida</span>
+                        <span class="badge">Custo-benefício</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/1JHkiD6" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== -->
+        <!-- CATEGORIA: CASA & LIMPEZA -->
+        <!-- ===================== -->
+        <section class="category" id="casa">
+            <div class="category-header">
+                <h3>🏠 Casa & Limpeza</h3>
+                <small>Utilidades e praticidade</small>
             </div>
 
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./4.jpeg" alt="kit 4 Borrachas Faber Castel" />
-                <h2> kit 4 Borrachas Faber Castel</h2>
-                <p>R$ 24,89</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
+            <div class="grid">
+                <div class="card">
+                    <img src="./lavajato.jpeg" alt="Lava Jato" />
+                    <span class="tag">Casa & Limpeza</span>
+                    <h2>Lavadora a jato de alta pressão portátil recarregável</h2>
+                    <p>A solução para qualquer tipo de limpeza.</p>
+                    <div class="badges">
+                        <span class="badge">Top vendas</span>
+                        <span class="badge">Entrega rápida</span>
+                    </div>
+                    <a class="btn" href="https://mercadolivre.com/sec/2LuknUp" target="_blank" rel="noopener">
+                        Ver preço e avaliações
+                    </a>
                 </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1Q5Qic3" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
             </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./5.jpeg" alt="kit 24 borrachas leo leo" />
-                <h2>kit 24 borrachas leo leo</h2>
-                <p>R$ 33,97</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/146J7dY" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./6.jpeg" alt="kit 2 borrachas Faber Castel" />
-                <h2>kit 2 borrachas Faber Castel</h2>
-                <p>R$ 9,99</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1JMZbVK" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./7.jpeg" alt="kit 4 Apontadores" />
-                <h2>kit 4 Apontadores</h2>
-                <p>R$ 21,20</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1jVK2VM" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./8.jpeg" alt="Kit 3 canetas" />
-                <h2>Kit 3 canetas</h2>
-                <p>R$ 33,90</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1KLGYJf" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./9.jpeg" alt="Estojo" />
-                <h2>Estojo</h2>
-                <p>R$ 29,79</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1hJB9iW" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./10.jpeg" alt="Mochila" />
-                <h2>Mochila</h2>
-                <p>R$ 66,12</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1PRQWsJ" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./11.jpeg" alt="Cola liquida" />
-                <h2>Cola liquida</h2>
-                <p>R$ 22,96</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/27uZFxt" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./12.jpeg" alt="Kit tesoura sem ponta" />
-                <h2>Kit tesoura sem ponta</h2>
-                <p>R$ 24,90</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/2F6Pn5S" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./13.jpeg" alt="12 Lapis de cor" />
-                <h2>12 Lapis de cor</h2>
-                <p>R$ 30,40</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/2Z1XmDF" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./14.jpeg" alt="Canetinhas kit 24 cores" />
-                <h2>Canetinhas kit 24 cores</h2>
-                <p>R$ 19,00</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/25AFmuC" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./15.jpeg" alt="Tinta Guache 12 cores" />
-                <h2>Tinta Guache 12 cores</h2>
-                <p>R$ 19,00</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1jdsrbC" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./16.jpeg" alt="Kit 12 pincéis" />
-                <h2>Kit 12 pincéis</h2>
-                <p>R$ 28,99</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1UVc917" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./17.jpeg" alt="500 Folhas A4 " />
-                <h2>500 Folhas A4 </h2>
-                <p>R$ 33,42</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1AqsGPD" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./18.jpeg" alt="Caneta Brush Pen 36 cores" />
-                <h2>Caneta Brush Pen 36 cores</h2>
-                <p>R$ 26,99</p>
-                <div class="badges">
-                    <span class="badge">Indispensavel</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/25dM9bK" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 1 -->
-            <div class="card">
-                <img src="./bolsa.jpg" alt="Bolsa organizadora" />
-                <h2>Bolsa organizadora prática para o dia a dia</h2>
-                <p>Uma solução simples que facilita a rotina e costuma ter ótimas avaliações.</p>
-                <div class="badges">
-                    <span class="badge">Fácil de usar</span>
-                    <span class="badge">Ótimas avaliações</span>
-                    <span class="badge">Entrega rápida</span>
-                    <span class="badge">Custo-benefício</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/1JHkiD6" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 2 (exemplo) -->
-            <div class="card">
-                <img src="./calca.jpeg" alt="Produto 2" />
-                <h2>Calça Jeans masculina confortavel</h2>
-                <p>Otmo custo beneficio em calça masculina</p>
-                <div class="badges">
-                    <span class="badge">Bem avaliado</span>
-                    <span class="badge">Conforto</span>
-                    <span class="badge">Otimo Custo Beneficio</span>
-                </div>
-                <a class="btn"
-                    href="https://produto.mercadolivre.com.br/MLB-4392538214-calca-jeans-masculina-tradicional-corte-reto-_JM#origin%3Dshare%26sid%3Dshare"
-                    target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-            <!-- CARD 3 (exemplo) -->
-            <div class="card">
-                <img src="./lavajato.jpeg" alt="Lava Jato" />
-                <h2>Lavadora A Jato De Alta Pressão Portátil Recarregável</h2>
-                <p>A solução para qualquer tipo de limpeza.</p>
-                <div class="badges">
-                    <span class="badge">Top vendas</span>
-                    <span class="badge">Entrega rápida</span>
-                </div>
-                <a class="btn" href="https://mercadolivre.com/sec/2LuknUp" target="_blank" rel="noopener">
-                    Ver preço e avaliações
-                </a>
-            </div>
-
-        </div>
+        </section>
 
         <div class="footer">
             *Este site pode conter links de afiliado. Ao comprar, podemos receber uma comissão sem custo adicional para
             você.*
         </div>
+
     </div>
 </body>
 
